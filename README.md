@@ -20,7 +20,7 @@ With multiple children, it can be difficult to remember everything about their s
 | Weather  | The application searches for the current weather and suggests suitable clothing.   |
 
 ### Graphical information model
-![UML](https://github.com/hartonenolli/hartonenolli/blob/main/familyManagmentApp/frontend/src/pictures/UML.png?raw=true)
+![UML](https://github.com/hartonenolli/ToolToFamily/blob/main/frontend/src/pictures/UML.png?raw=true)
 
 ## <a id="installation"></a>Installation
 The project is built with Node.js version 22.17.1. Please download at least Node version 22. Node installation instructions are [here](https://nodejs.org/en/download). Node comes with npm installed. The project has been using npm version 11.5.2.
