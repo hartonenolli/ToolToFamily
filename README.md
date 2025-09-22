@@ -27,23 +27,37 @@ The project is built with Node.js version 22.17.1. Please download at least Node
 
 After this, you can clone the repository for yourself:
 ```
-git clone 
+git clone git@github.com:hartonenolli/ToolToFamily.git
 ```
 
 After this, open separate terminals for the frontend and backend. In the root of the frontend, run:
 ```
+npm install
 ```
 You can start the frontend:
 ```
+npm run start
+```
+
+To retrieve weather data successfully, you need a free weather API key, which you can get [here](https://www.weatherapi.com/).
+
+You need to make .env file to the root of the backend. Add your api key to the file:
+```
+WEATHER_API_KEY=YOUR_API_KEY_HERE
+PORT=3001
 ```
 
 Run at the root of the backend:
 ```
+npm install
 ```
 
 You can start the backend:
 ```
+npm run start
 ```
+
+After these steps, you have successfully launched the application!
 
 ## <a id="project"></a>Project and instructions
 How to use here and examples.
