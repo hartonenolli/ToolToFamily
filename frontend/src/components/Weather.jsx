@@ -1,4 +1,5 @@
 import { useWeather } from '../hooks/useWeather'
+import { clothingSuggestion } from '../utils/Clothing'
 
 export const Weather = ({ city }) => {
   const weatherData = useWeather(city)
@@ -10,6 +11,14 @@ export const Weather = ({ city }) => {
   return (
     <div>
       <h3>Weather Forecast for Today in {city}</h3>
+      <p>
+        {clothingSuggestion({
+          temperature: weatherData.current.temp_c,
+          condition: weatherData.current.condition.text,
+          wind_speed: weatherData.current.wind_kph,
+          precipitation: weatherData.current.precip_mm > 0,
+        })}
+      </p>
       <ul>
         <li>Temperature: {weatherData.current.temp_c} °C</li>
         <li>Condition: {weatherData.current.condition.text}</li>

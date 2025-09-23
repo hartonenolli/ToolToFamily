@@ -21,42 +21,48 @@ const App = () => {
 
   return (
     <Router>
-      <div style={{ backgroundImage: `url(${background})`, minHeight: '100vh', backgroundSize: 'cover' }}>
-      <div className="container">
-        <h1>Family Management App</h1>
-        <div className='btn-group'>
-        <button type="button" className="btn btn-light">
-          <Link to="/">Home</Link>
-        </button>
-        <button type="button" className="btn btn-light">
-          <Link to="/calendar">Calendar</Link>
-        </button>
-        <button type="button" className="btn btn-light">
-          <Link to="/persons">Persons</Link>
-        </button>
-        <button type="button" className="btn btn-light">
-          <Link to="/add-person">Add Person</Link>
-        </button>
+      <div
+        style={{
+          backgroundImage: `url(${background})`,
+          minHeight: '100vh',
+          backgroundSize: 'cover',
+        }}
+      >
+        <div className="container">
+          <h1>Tool To Family App</h1>
+          <div className="btn-group">
+            <button type="button" className="btn btn-light">
+              <Link to="/">Home</Link>
+            </button>
+            <button type="button" className="btn btn-light">
+              <Link to="/calendar">Calendar</Link>
+            </button>
+            <button type="button" className="btn btn-light">
+              <Link to="/persons">Persons</Link>
+            </button>
+            <button type="button" className="btn btn-light">
+              <Link to="/add-person">Add Person</Link>
+            </button>
+          </div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route
+              path="/add-person"
+              element={
+                <>
+                  <PersonForm
+                    newPerson={newPerson}
+                    setNewPerson={setNewPerson}
+                    setPersons={setPersons}
+                  />
+                  <Persons persons={persons} />
+                </>
+              }
+            />
+            <Route path="/persons" element={<Persons persons={persons} />} />
+          </Routes>
         </div>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/calendar" element={<Calendar />} />
-          <Route
-            path="/add-person"
-            element={
-              <>
-                <PersonForm
-                  newPerson={newPerson}
-                  setNewPerson={setNewPerson}
-                  setPersons={setPersons}
-                />
-                <Persons persons={persons} />
-              </>
-            }
-          />
-          <Route path="/persons" element={<Persons persons={persons} />} />
-        </Routes>
-      </div>
       </div>
     </Router>
   )
