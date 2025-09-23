@@ -2,7 +2,7 @@
 - [TL;DR](#tldr)
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Project and instructions](#project)
+- [Project presentation](#project)
 
 ## <a id="tldr"></a>TL;DR
 This is the first of my hobby projects. The purpose of the application is to make it easier to manage a family. The target group of the application is families experiencing peak years.
@@ -59,5 +59,5 @@ npm run start
 
 After these steps, you have successfully launched the application!
 
-## <a id="project"></a>Project and instructions
-How to use here and examples.
+## <a id="project"></a>Project presentation
+[Version 1, 23.09.2025](https://github.com/hartonenolli/ToolToFamily/blob/main/diary/version1.md)
